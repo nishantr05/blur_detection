@@ -51,11 +51,11 @@ def main(_argv):
         labelSize2, baseLine2 = cv2.getTextSize(label2, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
         y1 = max(15, labelSize1[1])
         y2 = max(42, labelSize2[1])
-        cv2.rectangle(frame, (5, y1 - labelSize1[1]),
-                              (5 + (labelSize1[0]*3)//2, y1 + baseLine1),
+        cv2.rectangle(frame, (5, 15 - labelSize1[1]),
+                              (5 + (labelSize1[0]*3)//2, 15 + baseLine1),
                               (255, 255, 255), cv2.FILLED)
-        cv2.rectangle(frame, (5, y2 - labelSize2[1]),
-                              (5 + (labelSize2[0]*3)//2, y2 + baseLine2),
+        cv2.rectangle(frame, (5, 40 - labelSize2[1]),
+                              (5 + (labelSize2[0]*3)//2, 40 + baseLine2),
                               (255, 255, 255), cv2.FILLED)
         if score < threshold:
             print('Blurry frame detected at {}min {:.2f}sec '.format(minutes, seconds))
