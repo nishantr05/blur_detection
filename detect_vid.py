@@ -38,7 +38,7 @@ def main(_argv):
     
         img_new = cv2.Laplacian(img, cv2.CV_64F)
         score = img_new.var()
-        threshold = 100
+        threshold = 120
         #print(fps.type)
 
         curr_time = float(frame_no)/frameps
